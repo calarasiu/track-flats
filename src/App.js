@@ -29,7 +29,6 @@ class App extends Component{
   }
 
   render(){
-    const { apartmentName }= this.state
     return (
       <div>
         <FlatList
