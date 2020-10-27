@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import Flat from './Flat';
 
-const FlatList = (props)=>{
+const FlatList = ({flats, selectedFlat, selectFlat})=>{
   const renderList = () => {
-    return props.flats.map((flat, index) => {
+    return flats.map((flat, index) => {
       return (
         <Flat
           flat={flat}
           key={flat.lat}
-          selected={flat.name === props.selectedFlat.name}
+          selected={flat.name ===selectedFlat.name}
           index={index}
-          selectFlat={props.selectFlat}
+          selectFlat={selectFlat}
         />
       );
     });
